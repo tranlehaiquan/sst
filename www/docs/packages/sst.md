@@ -390,6 +390,23 @@ npx sst secrets remove MY_SECRET
 
   Note that, the fallback value can only be inherited by stages deployed in the same AWS account and region. [Read more about fallback values](../config.md#fallback-values).
 
+- **`--stage`**
+  _Default_: Your local stage
+
+  The stage you want to manage secrets for. If this is not specified, it will default to your local stage.
+
+  Managing secrets for a different stage.
+
+  ```bash
+  npx sst secrets get MY_SECRET --stage=staging
+  ```
+
+  Set secrets to a different stage.
+
+  ```bash
+  npx sst secrets set MY_SECRET abc --stage=staging
+  ```
+
 `sst secrets` takes the following commands.
 
 ---
